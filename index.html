@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WA Concept Construction – Maîtrise et innovation en bâtiment</title>
+  <meta name="description" content="WA Concept allie savoir-faire et technologies modernes pour vos travaux de construction, terrassement et isolation. Qualité et durabilité garanties sur chaque projet." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom brand color classes (overrides Tailwind for custom palette) -->
+  <style>
+    /* ===== OLIVE ===== */
+    .bg-olive-950 { background-color: #171a12; }
+    .bg-olive-900 { background-color: #1e2218; }
+    .bg-olive-800 { background-color: #282e1f; }
+    .bg-olive-700 { background-color: #343b29; }
+    .bg-olive-600 { background-color: #3f4733; }
+    .bg-olive-500 { background-color: #4d5640; }
+    .text-olive-900 { color: #1e2218; }
+    .border-olive-700 { border-color: #343b29; }
+    /* Opacity variants */
+    .bg-olive-950\/90  { background-color: rgba(23,26,18,.9); }
+    .bg-olive-950\/85  { background-color: rgba(23,26,18,.85); }
+    .bg-olive-950\/80  { background-color: rgba(23,26,18,.8); }
+    .bg-olive-950\/75  { background-color: rgba(23,26,18,.75); }
+    .bg-olive-950\/70  { background-color: rgba(23,26,18,.7); }
+    .bg-olive-950\/60  { background-color: rgba(23,26,18,.6); }
+    .bg-olive-950\/50  { background-color: rgba(23,26,18,.5); }
+    .bg-olive-900\/98  { background-color: rgba(30,34,24,.98); }
+    .bg-olive-900\/95  { background-color: rgba(30,34,24,.95); }
+    .bg-olive-900\/90  { background-color: rgba(30,34,24,.9); }
+    .bg-olive-900\/60  { background-color: rgba(30,34,24,.6); }
+    .bg-olive-900\/50  { background-color: rgba(30,34,24,.5); }
+    .bg-olive-800\/60  { background-color: rgba(40,46,31,.6); }
+    .bg-olive-800\/50  { background-color: rgba(40,46,31,.5); }
+    .bg-olive-800\/40  { background-color: rgba(40,46,31,.4); }
+    .bg-olive-700\/60  { background-color: rgba(52,59,41,.6); }
+    .bg-olive-700\/50  { background-color: rgba(52,59,41,.5); }
+    .bg-olive-700\/40  { background-color: rgba(52,59,41,.4); }
+    .bg-olive-700\/30  { background-color: rgba(52,59,41,.3); }
+    .bg-olive-600\/50  { background-color: rgba(63,71,51,.5); }
+    .hover\:bg-olive-800:hover { background-color: #282e1f; }
+    .hover\:bg-olive-700:hover { background-color: #343b29; }
+    .hover\:bg-olive-700\/60:hover { background-color: rgba(52,59,41,.6); }
+    .hover\:bg-olive-700\/70:hover { background-color: rgba(52,59,41,.7); }
+    .hover\:bg-olive-600\/50:hover { background-color: rgba(63,71,51,.5); }
+    /* ===== GOLD ===== */
+    .bg-gold-500  { background-color: #c4a44c; }
+    .bg-gold-400  { background-color: #d4b46c; }
+    .text-gold-500 { color: #c4a44c; }
+    .text-gold-400 { color: #d4b46c; }
+    .text-gold-300 { color: #e8d08e; }
+    .border-gold-500 { border-color: #c4a44c; }
+    .border-gold-500\/35 { border-color: rgba(196,164,76,.35); }
+    .border-gold-500\/30 { border-color: rgba(196,164,76,.30); }
+    .border-gold-500\/25 { border-color: rgba(196,164,76,.25); }
+    .border-gold-500\/20 { border-color: rgba(196,164,76,.20); }
+    .bg-gold-500\/20 { background-color: rgba(196,164,76,.2); }
+    .bg-gold-500\/15 { background-color: rgba(196,164,76,.15); }
+    .bg-gold-500\/10 { background-color: rgba(196,164,76,.1); }
+    .bg-gold-500\/25 { background-color: rgba(196,164,76,.25); }
+    .bg-gold-500\/30 { background-color: rgba(196,164,76,.3); }
+    .shadow-gold-500\/30 { --tw-shadow-color: rgba(196,164,76,.30); }
+    .shadow-gold-500\/25 { --tw-shadow-color: rgba(196,164,76,.25); }
+    .shadow-gold-500\/20 { --tw-shadow-color: rgba(196,164,76,.20); }
+    .hover\:bg-gold-400:hover { background-color: #d4b46c; }
+    .hover\:text-gold-400:hover { color: #d4b46c; }
+    .hover\:text-gold-300:hover { color: #e8d08e; }
+    .hover\:border-gold-500\/40:hover { border-color: rgba(196,164,76,.4); }
+    .hover\:border-gold-500\/25:hover { border-color: rgba(196,164,76,.25); }
+    /* ===== TEAL ===== */
+    .bg-teal-900   { background-color: #0f2a33; }
+    .bg-teal-800   { background-color: #183a46; }
+    .bg-teal-700   { background-color: #1f4d5c; }
+    .bg-teal-600   { background-color: #2a6070; }
+    .bg-teal-900\/60 { background-color: rgba(15,42,51,.6); }
+    .bg-teal-800\/50 { background-color: rgba(24,58,70,.5); }
+    .bg-teal-800\/40 { background-color: rgba(24,58,70,.4); }
+    .bg-teal-700\/60 { background-color: rgba(31,77,92,.6); }
+    .bg-teal-700\/50 { background-color: rgba(31,77,92,.5); }
+    .bg-teal-700\/40 { background-color: rgba(31,77,92,.4); }
+    .bg-teal-600\/40 { background-color: rgba(42,96,112,.4); }
+    .hover\:bg-teal-700\/60:hover { background-color: rgba(31,77,92,.6); }
+    .hover\:bg-teal-700\/70:hover { background-color: rgba(31,77,92,.7); }
+    .hover\:bg-teal-800\/70:hover { background-color: rgba(24,58,70,.7); }
+  </style>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Smooth scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #1e2218; }
+    ::-webkit-scrollbar-thumb { background: #c4a44c; border-radius: 3px; }
+
+    /* Nav active underline */
+    .nav-link {
+      position: relative;
+      padding-bottom: 3px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: #c4a44c;
+      border-radius: 1px;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+
+    /* Burger animation */
+    #burger span { transition: transform 0.3s ease, opacity 0.2s ease; display: block; }
+    #burger.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #burger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    #burger.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Portfolio hover */
+    .portfolio-item .overlay { opacity: 0; transition: opacity 0.35s ease; }
+    .portfolio-item:hover .overlay { opacity: 1; }
+    .portfolio-item img { transition: transform 0.5s ease; }
+    .portfolio-item:hover img { transform: scale(1.06); }
+
+    /* Service card icon */
+    .svc-card:hover .svc-icon { transform: scale(1.12) rotate(-3deg); }
+    .svc-icon { transition: transform 0.3s ease; }
+
+    /* Input focus */
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #c4a44c !important;
+      box-shadow: 0 0 0 3px rgba(196,164,76,0.12);
+    }
+
+    /* Hero entrance */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-line-1 { animation: fadeUp 0.7s ease 0.1s both; }
+    .hero-line-2 { animation: fadeUp 0.7s ease 0.25s both; }
+    .hero-line-3 { animation: fadeUp 0.7s ease 0.4s both; }
+    .hero-line-4 { animation: fadeUp 0.7s ease 0.55s both; }
+    .hero-line-5 { animation: fadeUp 0.7s ease 0.7s both; }
+
+    /* Spin for loader */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spin { animation: spin 0.8s linear infinite; }
+  </style>
+</head>
+
+<body class="bg-olive-800 text-white antialiased">
+
+<!-- ============================================================
+     HEADER STICKY
+============================================================ -->
+<header id="site-header"
+  class="fixed inset-x-0 top-0 z-50 bg-olive-900/95 backdrop-blur-md border-b border-white/5 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <!-- Logo -->
+      <a href="#accueil" class="flex items-center gap-3 group flex-shrink-0">
+        <div class="w-10 h-10 bg-gold-500 rounded-xl flex items-center justify-center shadow-lg shadow-gold-500/30">
+          <!-- Hard hat icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+            <path d="M3 13C3 9.134 7.03 6 12 6C16.97 6 21 9.134 21 13" stroke="#282e1f" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M12 6V3" stroke="#282e1f" stroke-width="2.2" stroke-linecap="round"/>
+            <rect x="1" y="13" width="22" height="3.5" rx="1.75" fill="#282e1f"/>
+            <path d="M8 16.5V19.5" stroke="#282e1f" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 16.5V19.5" stroke="#282e1f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block text-white font-black text-base tracking-wide leading-none">WA CONCEPT</span>
+          <span class="block text-gold-500 text-[10px] font-semibold tracking-[0.2em] uppercase mt-0.5">Construction</span>
+        </div>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#accueil"     class="nav-link text-sm font-medium text-white/75 hover:text-white transition-colors">Accueil</a>
+        <a href="#a-propos"    class="nav-link text-sm font-medium text-white/75 hover:text-white transition-colors">À propos</a>
+        <a href="#services"    class="nav-link text-sm font-medium text-white/75 hover:text-white transition-colors">Services</a>
+        <a href="#realisations" class="nav-link text-sm font-medium text-white/75 hover:text-white transition-colors">Réalisations</a>
+        <a href="#contact"
+          class="ml-2 inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 text-olive-900 text-sm font-bold rounded-xl hover:bg-gold-400 transition-all hover:-translate-y-px shadow-md shadow-gold-500/20">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          Demander un devis
+        </a>
+      </nav>
+
+      <!-- Burger button -->
+      <button id="burger" aria-label="Ouvrir le menu" aria-expanded="false"
+        class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors">
+        <span class="w-6 h-0.5 bg-white rounded-full origin-center"></span>
+        <span class="w-6 h-0.5 bg-white rounded-full origin-center"></span>
+        <span class="w-4 h-0.5 bg-white rounded-full origin-center self-end"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-nav"
+    class="md:hidden hidden border-t border-white/10 bg-olive-900/98 backdrop-blur-md">
+    <nav class="flex flex-col px-4 pt-3 pb-2 gap-0.5">
+      <a href="#accueil"      class="mob-link px-4 py-3 rounded-xl text-white/80 font-medium hover:bg-white/5 hover:text-white transition-all">Accueil</a>
+      <a href="#a-propos"     class="mob-link px-4 py-3 rounded-xl text-white/80 font-medium hover:bg-white/5 hover:text-white transition-all">À propos</a>
+      <a href="#services"     class="mob-link px-4 py-3 rounded-xl text-white/80 font-medium hover:bg-white/5 hover:text-white transition-all">Services</a>
+      <a href="#realisations" class="mob-link px-4 py-3 rounded-xl text-white/80 font-medium hover:bg-white/5 hover:text-white transition-all">Réalisations</a>
+      <a href="#contact"      class="mob-link mt-2 mb-1 px-4 py-3 rounded-xl bg-gold-500 text-olive-900 font-bold text-center hover:bg-gold-400 transition-colors">Demander un devis</a>
+    </nav>
+    <div class="flex items-center gap-4 px-8 py-4 border-t border-white/5">
+      <a href="https://www.instagram.com/" aria-label="Instagram" class="text-white/40 hover:text-white transition-colors">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/" aria-label="Facebook" class="text-white/40 hover:text-white transition-colors">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://x.com/" aria-label="X / Twitter" class="text-white/40 hover:text-white transition-colors">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     #ACCUEIL — HERO
+============================================================ -->
+<section id="accueil" class="relative min-h-screen flex items-center overflow-hidden">
+
+  <!-- BG image + overlays -->
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+      alt="Chantier de construction WA Concept"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-olive-950/85 via-olive-900/70 to-olive-900/80"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-olive-950/50 via-transparent to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-16">
+
+    <!-- Badge -->
+    <div class="hero-line-1 inline-flex items-center gap-2 bg-gold-500/15 border border-gold-500/25 rounded-full px-4 py-1.5 mb-8">
+      <span class="w-2 h-2 bg-gold-400 rounded-full"></span>
+      <span class="text-gold-300 text-sm font-medium tracking-wide">Expert bâtiment — Île-de-France · 25 ans d'expérience</span>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="hero-line-2 text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.05] tracking-tight mb-6 max-w-3xl">
+      WA Concept :<br/>
+      <span class="text-gold-400">Maîtrise</span> et innovation<br/>
+      en bâtiment
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-line-3 text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+      Découvrez comment WA Concept allie savoir-faire et technologies modernes pour vos travaux de
+      construction, terrassement et isolation, garantissant qualité et durabilité sur chaque projet.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-line-4 flex flex-col sm:flex-row gap-4">
+      <a href="#a-propos"
+        class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-olive-900 font-bold text-base rounded-xl hover:bg-gold-400 transition-all hover:-translate-y-0.5 shadow-xl shadow-gold-500/25">
+        En savoir plus
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact"
+        class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold text-base rounded-xl hover:bg-white/10 transition-all">
+        Demander un devis gratuit
+      </a>
+    </div>
+
+    <!-- Stats cards -->
+    <div class="hero-line-5 mt-14 lg:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/8 transition-colors">
+        <div class="text-3xl sm:text-4xl font-black text-gold-400 leading-none mb-1">140+</div>
+        <div class="text-white/60 text-xs sm:text-sm font-medium">Chantiers réussis</div>
+      </div>
+      <div class="bg-teal-700/50 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-teal-700/60 transition-colors">
+        <div class="text-3xl sm:text-4xl font-black text-gold-400 leading-none mb-1">220</div>
+        <div class="text-white/60 text-xs sm:text-sm font-medium">Clients satisfaits</div>
+      </div>
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/8 transition-colors">
+        <div class="text-3xl sm:text-4xl font-black text-gold-400 leading-none mb-1">25</div>
+        <div class="text-white/60 text-xs sm:text-sm font-medium">Ans d'expérience</div>
+      </div>
+      <div class="bg-teal-700/50 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-teal-700/60 transition-colors">
+        <div class="text-3xl sm:text-4xl font-black text-gold-400 leading-none mb-1">95%</div>
+        <div class="text-white/60 text-xs sm:text-sm font-medium">Taux de satisfaction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5">
+    <span class="text-white/30 text-[10px] font-semibold uppercase tracking-[0.2em]">Défiler</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5 text-white/30 animate-bounce"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #A-PROPOS — À PROPOS
+============================================================ -->
+<section id="a-propos" class="py-20 lg:py-28 bg-olive-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-gold-500 text-xs font-bold uppercase tracking-[0.2em]">Notre histoire</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        Spécialistes en bâtiment<br class="hidden md:block"/> au service de vos ambitions
+      </h2>
+      <p class="mt-5 text-white/55 text-lg max-w-2xl mx-auto">
+        Découvrez la passion et l'engagement de WA Concept, animés par la qualité, la rigueur
+        et l'innovation au cœur de chaque projet.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center mb-20">
+
+      <!-- Images mosaic -->
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          <div class="rounded-2xl overflow-hidden row-span-2">
+            <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=700&q=80"
+              alt="Équipe WA Concept sur chantier" class="w-full h-full object-cover min-h-[320px]">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500&q=80"
+              alt="Construction WA Concept" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=80"
+              alt="Réalisation WA Concept" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <!-- Floating badge -->
+        <div class="absolute -bottom-5 -right-3 sm:-right-5 bg-gold-500 text-olive-900 rounded-2xl p-4 sm:p-5 shadow-2xl shadow-gold-500/30">
+          <div class="text-3xl sm:text-4xl font-black leading-none">25</div>
+          <div class="text-[10px] sm:text-xs font-bold uppercase tracking-wide mt-0.5 leading-tight">ans<br/>d'expertise</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="pt-6 lg:pt-0">
+        <div class="w-10 h-1 bg-gold-500 rounded-full mb-6"></div>
+        <h3 class="text-2xl lg:text-3xl font-bold mb-4">
+          Expertise reconnue en construction et terrassement
+        </h3>
+        <p class="text-white/60 leading-relaxed mb-5">
+          WA Concept s'engage à allier savoir-faire et innovation pour réaliser des projets durables
+          qui répondent aux besoins spécifiques de chaque client et contribuent au développement
+          responsable de nos territoires.
+        </p>
+        <p class="text-white/60 leading-relaxed mb-8">
+          WA Concept s'engage à bâtir avec rigueur, respect et excellence pour transformer vos besoins
+          en réalisations durables. Chaque chantier est l'occasion de démontrer notre engagement envers
+          la qualité et votre satisfaction totale.
+        </p>
+
+        <!-- Promise box -->
+        <div class="bg-gold-500/10 border border-gold-500/25 rounded-2xl p-5 mb-8">
+          <div class="flex items-start gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="2" class="w-5 h-5 flex-shrink-0 mt-0.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            <div>
+              <div class="text-gold-400 font-semibold text-sm mb-1">Notre promesse : des résultats d'excellence</div>
+              <div class="text-white/55 text-sm leading-relaxed">
+                Chaque projet est traité avec le même niveau d'exigence, qu'il s'agisse d'une construction
+                neuve, d'un terrassement complexe ou d'une solution d'isolation performante.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications grid -->
+        <div class="grid grid-cols-2 gap-2.5">
+          <div class="flex items-center gap-2.5 bg-olive-700/40 border border-white/8 rounded-xl p-3">
+            <div class="w-7 h-7 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="2" class="w-3.5 h-3.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
+            <span class="text-white/75 text-xs font-medium">Qualibat RGE</span>
+          </div>
+          <div class="flex items-center gap-2.5 bg-olive-700/40 border border-white/8 rounded-xl p-3">
+            <div class="w-7 h-7 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="2" class="w-3.5 h-3.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="text-white/75 text-xs font-medium">Sécurité certifiée</span>
+          </div>
+          <div class="flex items-center gap-2.5 bg-olive-700/40 border border-white/8 rounded-xl p-3">
+            <div class="w-7 h-7 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="2" class="w-3.5 h-3.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span class="text-white/75 text-xs font-medium">Label Artisan</span>
+          </div>
+          <div class="flex items-center gap-2.5 bg-olive-700/40 border border-white/8 rounded-xl p-3">
+            <div class="w-7 h-7 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="2" class="w-3.5 h-3.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <span class="text-white/75 text-xs font-medium">Membre FFB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="group bg-olive-700/40 border border-white/8 rounded-2xl p-8 text-center hover:bg-olive-700/60 hover:border-gold-500/20 transition-all">
+        <div class="text-5xl font-black text-gold-400 mb-2">150</div>
+        <div class="text-white font-semibold text-sm mb-1">Projets réalisés</div>
+        <div class="text-white/45 text-xs leading-relaxed">Une solide expertise confirmée par le nombre de projets menés à bien.</div>
+      </div>
+      <div class="group bg-teal-800/50 border border-white/8 rounded-2xl p-8 text-center hover:bg-teal-800/70 hover:border-gold-500/20 transition-all">
+        <div class="text-5xl font-black text-gold-400 mb-2">25</div>
+        <div class="text-white font-semibold text-sm mb-1">Années d'expérience</div>
+        <div class="text-white/45 text-xs leading-relaxed">Une longue histoire de savoir-faire et de fiabilité dans les travaux publics.</div>
+      </div>
+      <div class="group bg-olive-700/40 border border-white/8 rounded-2xl p-8 text-center hover:bg-olive-700/60 hover:border-gold-500/20 transition-all">
+        <div class="text-5xl font-black text-gold-400 mb-2">95%</div>
+        <div class="text-white font-semibold text-sm mb-1">Clients satisfaits</div>
+        <div class="text-white/45 text-xs leading-relaxed">Un taux élevé de satisfaction témoignant de notre sérieux et qualité d'exécution.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #SERVICES — PRESTATIONS
+============================================================ -->
+<section id="services" class="py-20 lg:py-28 bg-olive-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-gold-500 text-xs font-bold uppercase tracking-[0.2em]">Ce que nous faisons</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        Confiez vos projets<br class="hidden md:block"/> à notre expertise
+      </h2>
+      <p class="mt-5 text-white/55 text-lg max-w-2xl mx-auto">
+        Découvrez notre large gamme de prestations en construction, terrassement et isolation,
+        toujours orientées vers l'excellence et votre entière satisfaction.
+      </p>
+    </div>
+
+    <!-- Service cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+
+      <!-- Construction -->
+      <div class="svc-card group bg-olive-800/60 border border-white/8 rounded-2xl overflow-hidden hover:border-gold-500/35 hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
+            alt="Construction de bâtiments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6">
+          <div class="svc-icon w-11 h-11 bg-gold-500/15 rounded-xl flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Construction de bâtiments</h3>
+          <p class="text-white/55 text-sm leading-relaxed mb-5">
+            Nous réalisons vos projets de construction avec précision et respect des délais.
+            Des réalisations adaptées à vos besoins spécifiques, alliant robustesse et esthétisme.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-1.5 text-gold-400 text-sm font-semibold hover:text-gold-300 transition-colors group/link">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Isolation -->
+      <div class="svc-card group bg-teal-900/60 border border-white/8 rounded-2xl overflow-hidden hover:border-gold-500/35 hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+            alt="Isolation thermique" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6">
+          <div class="svc-icon w-11 h-11 bg-gold-500/15 rounded-xl flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Isolation thermique et acoustique</h3>
+          <p class="text-white/55 text-sm leading-relaxed mb-5">
+            Garantissant confort et économies d'énergie, nos solutions d'isolation sont durables
+            et performantes. Techniques modernes pour un confort optimal.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-1.5 text-gold-400 text-sm font-semibold hover:text-gold-300 transition-colors group/link">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Terrassement -->
+      <div class="svc-card group bg-olive-800/60 border border-white/8 rounded-2xl overflow-hidden hover:border-gold-500/35 hover:-translate-y-1 transition-all duration-300">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+            alt="Terrassement" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6">
+          <div class="svc-icon w-11 h-11 bg-gold-500/15 rounded-xl flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M2 20h20M5 20V10l7-7 7 7v10M9 20v-5h6v5"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Terrassement et travaux publics</h3>
+          <p class="text-white/55 text-sm leading-relaxed mb-5">
+            Nous adaptons nos interventions pour assurer des fondations solides et un terrain
+            parfaitement préparé. Préparation rigoureuse pour la stabilité de vos ouvrages.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-1.5 text-gold-400 text-sm font-semibold hover:text-gold-300 transition-colors group/link">
+            Demander un devis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications banner -->
+    <div class="bg-olive-800/50 border border-white/8 rounded-2xl p-8">
+      <div class="text-center mb-8">
+        <h3 class="text-white font-bold text-xl">Une expertise validée par des standards rigoureux</h3>
+        <p class="text-white/45 text-sm mt-2 max-w-lg mx-auto">
+          Nos certifications professionnelles et protocoles de sécurité garantissent un service fiable et de qualité.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center px-3 py-4">
+          <div class="w-14 h-14 bg-gold-500/15 border border-gold-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-7 h-7"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <div class="text-white font-semibold text-sm">Qualibat RGE</div>
+          <div class="text-white/40 text-xs mt-1">Rénovation énergétique</div>
+        </div>
+        <div class="text-center px-3 py-4">
+          <div class="w-14 h-14 bg-gold-500/15 border border-gold-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-7 h-7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="text-white font-semibold text-sm">Sécurité au Travail</div>
+          <div class="text-white/40 text-xs mt-1">Politique stricte de sécurité</div>
+        </div>
+        <div class="text-center px-3 py-4">
+          <div class="w-14 h-14 bg-gold-500/15 border border-gold-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-7 h-7"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="text-white font-semibold text-sm">Label Artisan</div>
+          <div class="text-white/40 text-xs mt-1">Savoir-faire artisanal</div>
+        </div>
+        <div class="text-center px-3 py-4">
+          <div class="w-14 h-14 bg-gold-500/15 border border-gold-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-7 h-7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="text-white font-semibold text-sm">Membre FFB</div>
+          <div class="text-white/40 text-xs mt-1">Fédération Française du Bâtiment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #REALISATIONS — PORTFOLIO + TÉMOIGNAGES
+============================================================ -->
+<section id="realisations" class="py-20 lg:py-28 bg-olive-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-gold-500 text-xs font-bold uppercase tracking-[0.2em]">Notre portfolio</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        Projets innovants<br class="hidden md:block"/> pour vos bâtisses
+      </h2>
+      <p class="mt-5 text-white/55 text-lg max-w-2xl mx-auto">
+        Découvrez une galerie exclusive illustrant notre savoir-faire en construction,
+        terrassement et isolation.
+      </p>
+    </div>
+
+    <!-- Masonry-style gallery -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-20">
+
+      <!-- Large item -->
+      <div class="portfolio-item relative rounded-2xl overflow-hidden col-span-2 md:col-span-1 row-span-2 cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80"
+          alt="Construction résidentielle" class="w-full h-full object-cover min-h-[260px] md:min-h-[420px]">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/90 via-olive-950/40 to-transparent flex flex-col justify-end p-5 sm:p-6">
+          <span class="text-gold-400 text-xs font-bold uppercase tracking-widest mb-1">Construction</span>
+          <h4 class="text-white font-bold text-base sm:text-lg">Construction sur mesure</h4>
+          <p class="text-white/60 text-xs sm:text-sm mt-1">Des réalisations adaptées à vos besoins spécifiques.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item relative rounded-2xl overflow-hidden cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=700&q=80"
+          alt="Terrassement professionnel" class="w-full h-full object-cover aspect-square">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/85 to-transparent flex flex-col justify-end p-4">
+          <span class="text-gold-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Terrassement</span>
+          <h4 class="text-white font-bold text-sm">Terrassement professionnel</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-item relative rounded-2xl overflow-hidden cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80"
+          alt="Gros œuvre" class="w-full h-full object-cover aspect-square">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/85 to-transparent flex flex-col justify-end p-4">
+          <span class="text-gold-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Chantier</span>
+          <h4 class="text-white font-bold text-sm">Gros œuvre</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-item relative rounded-2xl overflow-hidden cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=700&q=80"
+          alt="Isolation performante" class="w-full h-full object-cover aspect-square">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/85 to-transparent flex flex-col justify-end p-4">
+          <span class="text-gold-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Isolation</span>
+          <h4 class="text-white font-bold text-sm">Isolation performante</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-item relative rounded-2xl overflow-hidden cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1529082576084-2d0d9f45e19f?w=700&q=80"
+          alt="Préparation du terrain" class="w-full h-full object-cover aspect-square">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/85 to-transparent flex flex-col justify-end p-4">
+          <span class="text-gold-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Fondations</span>
+          <h4 class="text-white font-bold text-sm">Préparation du terrain</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-item relative rounded-2xl overflow-hidden cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=700&q=80"
+          alt="Infrastructure" class="w-full h-full object-cover aspect-square">
+        <div class="overlay absolute inset-0 bg-gradient-to-t from-olive-950/85 to-transparent flex flex-col justify-end p-4">
+          <span class="text-gold-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Travaux publics</span>
+          <h4 class="text-white font-bold text-sm">Infrastructure</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials divider -->
+    <div class="flex items-center gap-5 mb-10">
+      <div class="flex-1 h-px bg-white/10"></div>
+      <span class="text-white/50 text-xs font-bold uppercase tracking-[0.2em] whitespace-nowrap">Ils nous font confiance</span>
+      <div class="flex-1 h-px bg-white/10"></div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <div class="bg-olive-700/40 border border-white/8 rounded-2xl p-6 hover:border-gold-500/25 transition-colors">
+        <div class="flex gap-1 mb-4">
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/70 text-sm italic leading-relaxed mb-5">
+          "Une collaboration réussie qui témoigne du sérieux et de l'efficacité de leur équipe.
+           Un travail d'une qualité remarquable, du début à la livraison."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-gold-500/25 rounded-full flex items-center justify-center text-gold-300 font-black text-sm flex-shrink-0">S</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Sophie Martin</div>
+            <div class="text-white/45 text-xs">Architecte partenaire</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-teal-800/50 border border-white/8 rounded-2xl p-6 hover:border-gold-500/25 transition-colors">
+        <div class="flex gap-1 mb-4">
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/70 text-sm italic leading-relaxed mb-5">
+          "Le professionnalisme et la rigueur de WA Concept ont dépassé toutes mes attentes.
+           Je recommande vivement leurs services à tous mes confrères."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-teal-600/40 rounded-full flex items-center justify-center text-gold-300 font-black text-sm flex-shrink-0">M</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Marc Dupont</div>
+            <div class="text-white/45 text-xs">Chef de chantier</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-olive-700/40 border border-white/8 rounded-2xl p-6 hover:border-gold-500/25 transition-colors">
+        <div class="flex gap-1 mb-4">
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#c4a44c" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-white/70 text-sm italic leading-relaxed mb-5">
+          "Une prestation irréprochable, du début à la fin du chantier. WA Concept a su répondre
+           à toutes nos exigences avec brio et dans les délais impartis."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-gold-500/25 rounded-full flex items-center justify-center text-gold-300 font-black text-sm flex-shrink-0">É</div>
+          <div>
+            <div class="text-white font-semibold text-sm">Élise Bernard</div>
+            <div class="text-white/45 text-xs">Directrice des opérations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #CONTACT — FORMULAIRE + COORDONNÉES
+============================================================ -->
+<section id="contact" class="py-20 lg:py-28 bg-olive-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-gold-500 text-xs font-bold uppercase tracking-[0.2em]">Parlons de votre projet</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        Contactez-nous
+      </h2>
+      <p class="mt-5 text-white/55 text-lg max-w-xl mx-auto">
+        Retrouvez ici toutes nos coordonnées pour nous joindre rapidement et efficacement.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-8 xl:gap-12 items-start">
+
+      <!-- Sidebar: info + map -->
+      <div class="lg:col-span-2 space-y-5">
+
+        <!-- Info card -->
+        <div class="bg-olive-800/60 border border-white/8 rounded-2xl p-6">
+          <h3 class="text-white font-bold text-lg mb-6">Nos coordonnées</h3>
+          <div class="space-y-5">
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold-500/15 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-1">Adresse</div>
+                <div class="text-white font-medium text-sm">3 Avenue des Bleuets</div>
+                <div class="text-white/65 text-sm">78340 Les Clayes-sous-Bois</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.67 19.79 19.79 0 01.01 2a2 2 0 012-2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+              </div>
+              <div>
+                <div class="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-1">Téléphone</div>
+                <a href="tel:0620300559" class="text-white font-medium text-sm hover:text-gold-400 transition-colors">06 20 30 05 59</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gold-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c4a44c" stroke-width="1.5" class="w-5 h-5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-1">Email</div>
+                <a href="mailto:hedi@waconceptconstruction.com" class="text-white font-medium text-sm hover:text-gold-400 transition-colors break-all">hedi@waconceptconstruction.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social card -->
+        <div class="bg-olive-800/60 border border-white/8 rounded-2xl p-5">
+          <div class="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-4">Suivez-nous</div>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/" class="flex-1 flex items-center justify-center gap-2 bg-olive-700/50 hover:bg-olive-600/50 rounded-xl py-3 text-white/65 hover:text-white transition-all text-xs font-semibold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/" class="flex-1 flex items-center justify-center gap-2 bg-olive-700/50 hover:bg-olive-600/50 rounded-xl py-3 text-white/65 hover:text-white transition-all text-xs font-semibold">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="bg-olive-800/60 border border-white/8 rounded-2xl overflow-hidden h-48 sm:h-56">
+          <iframe
+            src="https://maps.google.com/maps?q=3+Avenue+des+Bleuets,+78340+Les+Clayes-sous-Bois&output=embed"
+            width="100%" height="100%"
+            style="border:0; filter:invert(90%) hue-rotate(180deg) brightness(0.8) saturate(0.8);"
+            allowfullscreen loading="lazy"
+            title="Localisation WA Concept Construction">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-3">
+        <div class="bg-olive-800/60 border border-white/8 rounded-2xl p-6 sm:p-8">
+          <h3 class="text-white font-bold text-xl mb-1">Envoyez-nous un message</h3>
+          <p class="text-white/45 text-sm mb-8">Décrivez votre projet et nous vous recontacterons sous 24h.</p>
+
+          <form id="contact-form" novalidate class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="f-nom" class="block text-white/65 text-xs font-semibold uppercase tracking-wider mb-2">Votre nom <span class="text-gold-500 normal-case">*</span></label>
+                <input type="text" id="f-nom" name="nom" placeholder="Jean Dupont" required
+                  class="w-full bg-olive-900/60 border border-white/12 rounded-xl px-4 py-3 text-white text-sm placeholder-white/25 transition-all">
+              </div>
+              <div>
+                <label for="f-email" class="block text-white/65 text-xs font-semibold uppercase tracking-wider mb-2">Votre e-mail <span class="text-gold-500 normal-case">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="jean@exemple.fr" required
+                  class="w-full bg-olive-900/60 border border-white/12 rounded-xl px-4 py-3 text-white text-sm placeholder-white/25 transition-all">
+              </div>
+            </div>
+
+            <div>
+              <label for="f-tel" class="block text-white/65 text-xs font-semibold uppercase tracking-wider mb-2">Téléphone</label>
+              <input type="tel" id="f-tel" name="telephone" placeholder="06 XX XX XX XX"
+                class="w-full bg-olive-900/60 border border-white/12 rounded-xl px-4 py-3 text-white text-sm placeholder-white/25 transition-all">
+            </div>
+
+            <div>
+              <label for="f-service" class="block text-white/65 text-xs font-semibold uppercase tracking-wider mb-2">Type de prestation</label>
+              <div class="relative">
+                <select id="f-service" name="service"
+                  class="w-full appearance-none bg-olive-900/60 border border-white/12 rounded-xl px-4 py-3 text-white text-sm transition-all cursor-pointer">
+                  <option value="" class="bg-olive-900">Choisissez une prestation...</option>
+                  <option value="construction" class="bg-olive-900">Construction de bâtiments</option>
+                  <option value="isolation" class="bg-olive-900">Isolation thermique et acoustique</option>
+                  <option value="terrassement" class="bg-olive-900">Terrassement et travaux publics</option>
+                  <option value="autre" class="bg-olive-900">Autre demande</option>
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div>
+              <label for="f-message" class="block text-white/65 text-xs font-semibold uppercase tracking-wider mb-2">Votre message <span class="text-white/30 font-normal normal-case">(facultatif)</span></label>
+              <textarea id="f-message" name="message" rows="5"
+                placeholder="Décrivez votre projet, vos contraintes, votre budget approximatif…"
+                class="w-full bg-olive-900/60 border border-white/12 rounded-xl px-4 py-3 text-white text-sm placeholder-white/25 resize-none transition-all"></textarea>
+            </div>
+
+            <button type="submit" id="f-submit"
+              class="w-full flex items-center justify-center gap-2.5 py-4 bg-gold-500 hover:bg-gold-400 text-olive-900 font-bold text-base rounded-xl transition-all hover:-translate-y-0.5 shadow-xl shadow-gold-500/20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              Envoyer le message
+            </button>
+
+            <div id="f-success" class="hidden items-center gap-3 bg-emerald-500/15 border border-emerald-500/25 rounded-xl px-5 py-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" class="w-5 h-5 flex-shrink-0"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-emerald-400 text-sm font-medium">Message envoyé avec succès ! Nous vous répondrons sous 24h.</span>
+            </div>
+
+            <div id="f-error" class="hidden items-center gap-3 bg-red-500/15 border border-red-500/25 rounded-xl px-5 py-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" class="w-5 h-5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+              <span class="text-red-400 text-sm font-medium">Veuillez remplir les champs obligatoires (nom et email).</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="bg-olive-950 border-t border-white/8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Main footer grid -->
+    <div class="py-12 lg:py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Brand column -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gold-500 rounded-xl flex items-center justify-center shadow-lg shadow-gold-500/20">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+              <path d="M3 13C3 9.134 7.03 6 12 6C16.97 6 21 9.134 21 13" stroke="#282e1f" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M12 6V3" stroke="#282e1f" stroke-width="2.2" stroke-linecap="round"/>
+              <rect x="1" y="13" width="22" height="3.5" rx="1.75" fill="#282e1f"/>
+              <path d="M8 16.5V19.5" stroke="#282e1f" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 16.5V19.5" stroke="#282e1f" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="block text-white font-black text-base tracking-wide">WA CONCEPT</span>
+            <span class="block text-gold-500 text-[10px] font-semibold tracking-[0.2em] uppercase">Construction</span>
+          </div>
+        </div>
+        <p class="text-white/40 text-xs leading-relaxed mb-5">
+          Expert en construction, terrassement et isolation en Île-de-France.
+          Qualité, rigueur et innovation à chaque projet depuis 25 ans.
+        </p>
+        <div class="flex gap-2.5">
+          <a href="https://www.instagram.com/" aria-label="Instagram"
+            class="w-9 h-9 bg-olive-800 hover:bg-olive-700 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" aria-label="Facebook"
+            class="w-9 h-9 bg-olive-800 hover:bg-olive-700 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://x.com/" aria-label="X / Twitter"
+            class="w-9 h-9 bg-olive-800 hover:bg-olive-700 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <div class="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-5">Navigation</div>
+        <ul class="space-y-3">
+          <li><a href="#accueil"      class="text-white/60 hover:text-gold-400 text-sm transition-colors">Accueil</a></li>
+          <li><a href="#a-propos"     class="text-white/60 hover:text-gold-400 text-sm transition-colors">À propos</a></li>
+          <li><a href="#services"     class="text-white/60 hover:text-gold-400 text-sm transition-colors">Services</a></li>
+          <li><a href="#realisations" class="text-white/60 hover:text-gold-400 text-sm transition-colors">Réalisations</a></li>
+          <li><a href="#contact"      class="text-white/60 hover:text-gold-400 text-sm transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div class="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-5">Nos services</div>
+        <ul class="space-y-3">
+          <li class="text-white/55 text-sm">Construction de bâtiments</li>
+          <li class="text-white/55 text-sm">Isolation thermique et acoustique</li>
+          <li class="text-white/55 text-sm">Terrassement et travaux publics</li>
+          <li class="text-white/55 text-sm">Rénovation énergétique (RGE)</li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <div class="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] mb-5">Contact</div>
+        <ul class="space-y-3">
+          <li class="text-white/50 text-xs leading-relaxed">3 Avenue des Bleuets<br/>78340 Les Clayes-sous-Bois</li>
+          <li><a href="tel:0620300559" class="text-white/60 hover:text-gold-400 text-sm transition-colors">06 20 30 05 59</a></li>
+          <li><a href="mailto:hedi@waconceptconstruction.com" class="text-white/60 hover:text-gold-400 text-xs transition-colors break-all">hedi@waconceptconstruction.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-white/25 text-xs text-center sm:text-left">
+        &copy; 2025 WA Concept Construction. Tous droits réservés.
+      </p>
+      <div class="flex items-center gap-5">
+        <a href="#" class="text-white/25 hover:text-white/50 text-xs transition-colors">Mentions légales</a>
+        <a href="#" class="text-white/25 hover:text-white/50 text-xs transition-colors">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ---- Burger menu ---- */
+  const burger     = document.getElementById('burger');
+  const mobileNav  = document.getElementById('mobile-nav');
+  const mobLinks   = document.querySelectorAll('.mob-link');
+
+  burger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('hidden');
+    burger.classList.toggle('is-open', !isOpen);
+    burger.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  mobLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.add('hidden');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!burger.contains(e.target) && !mobileNav.contains(e.target)) {
+      mobileNav.classList.add('hidden');
+      burger.classList.remove('is-open');
+    }
+  });
+
+  /* ---- Header shadow on scroll ---- */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow-xl', window.scrollY > 40);
+  }, { passive: true });
+
+  /* ---- Active nav link via IntersectionObserver ---- */
+  const sections  = document.querySelectorAll('section[id]');
+  const navLinks  = document.querySelectorAll('a.nav-link');
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  sections.forEach(s => io.observe(s));
+
+  /* ---- Contact form ---- */
+  const form      = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('f-submit');
+  const success   = document.getElementById('f-success');
+  const errorBox  = document.getElementById('f-error');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const nom   = document.getElementById('f-nom').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+
+    success.classList.add('hidden');    success.classList.remove('flex');
+    errorBox.classList.add('hidden');   errorBox.classList.remove('flex');
+
+    if (!nom || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorBox.classList.remove('hidden');
+      errorBox.classList.add('flex');
+      if (!nom)   document.getElementById('f-nom').style.borderColor   = '#f87171';
+      if (!email) document.getElementById('f-email').style.borderColor = '#f87171';
+      return;
+    }
+
+    submitBtn.disabled  = true;
+    submitBtn.innerHTML = '<svg class="spin w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-dashoffset="10" stroke-linecap="round"/></svg> Envoi en cours…';
+
+    setTimeout(() => {
+      submitBtn.style.display = 'none';
+      success.classList.remove('hidden');
+      success.classList.add('flex');
+      form.reset();
+    }, 1600);
+  });
+
+  /* Reset border color on typing */
+  ['f-nom', 'f-email'].forEach(id => {
+    document.getElementById(id).addEventListener('input', function () {
+      this.style.borderColor = '';
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
